@@ -1,0 +1,30 @@
+{
+  "name": "frida-com.kiloo.subwaysurf",
+  "version": "1.0.0",
+  "description": "Subwaysurf Frida Script With Mod Menu",
+  "scripts": {
+    "spawn": "frida -U -f com.kiloo.subwaysurf -l dist/agent.js --auto-reload --kill-on-exit",
+    "watch": "frida-compile src/index.ts -o dist/agent.js -w",
+    "build": "frida-compile src/index.ts -o dist/agent.js -c"
+  },
+  "keywords": [],
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
+  "author": "maars",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/frida-gum": "^18.3.2",
+    "frida-compile": "^16.3.0",
+    "frida-il2cpp-bridge": "^0.8.5",
+    "typescript": "^5.1.6"
+  }
+}
